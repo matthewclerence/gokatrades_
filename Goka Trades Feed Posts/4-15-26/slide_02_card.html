@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 02 - Card Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative;
+  }
+  .blurred-bg {
+    position: absolute; top: -80px; left: -80px;
+    width: calc(100% + 160px); height: calc(100% + 160px);
+    background-image: url('../../images/5287492.jpg');
+    background-size: cover; background-position: center;
+    filter: blur(35px) brightness(0.3) saturate(0.7); z-index: 0;
+  }
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: rgba(255, 68, 68, 0.9); padding: 10px 18px; border-radius: 4px;
+  }
+  .handle {
+    position: absolute; bottom: 24px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .page-content {
+    position: relative; z-index: 2; width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 60px 0;
+  }
+  .section-label {
+    font-size: 24px; font-weight: 700; color: #A0A0A0;
+    text-transform: uppercase; letter-spacing: 12px; margin-bottom: 42px;
+  }
+  .section-underline { display: block; width: 70px; height: 4px; background: #FF4444; margin: 14px auto 0; }
+  .content { display: flex; align-items: flex-start; gap: 52px; padding: 0 56px; }
+  .card-img {
+    width: 450px; border-radius: 18px;
+    box-shadow: 0 28px 80px rgba(0,0,0,0.6); flex-shrink: 0;
+  }
+  .info-side { display: flex; flex-direction: column; padding-top: 12px; }
+  .card-name {
+    font-size: 80px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; line-height: 1.0; margin-bottom: 8px;
+  }
+  .card-rarity {
+    font-size: 30px; font-weight: 600; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 3px; margin-bottom: 38px;
+  }
+  .info-item { margin-bottom: 26px; }
+  .info-label {
+    font-size: 18px; font-weight: 600; color: #A0A0A0;
+    text-transform: uppercase; letter-spacing: 5px; margin-bottom: 4px;
+  }
+  .info-value { font-size: 36px; font-weight: 700; color: #FFFFFF; }
+  .note {
+    text-align: center; padding: 0 80px; margin-top: 46px;
+    font-size: 24px; color: rgba(255,255,255,0.45); font-style: italic;
+  }
+</style>
+</head>
+<body>
+  <div class="blurred-bg"></div>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="page-content">
+    <div class="section-label">K A R T U<span class="section-underline"></span></div>
+    <div class="content">
+      <img class="card-img" src="../../images/5287492.jpg" alt="Magikarp IR">
+      <div class="info-side">
+        <div class="card-name">MAGIKARP</div>
+        <div class="card-rarity">Illustration Rare</div>
+        <div class="info-item"><div class="info-label">Set</div><div class="info-value">Paldea Evolved</div></div>
+        <div class="info-item"><div class="info-label">Nomor</div><div class="info-value">#203/193</div></div>
+        <div class="info-item"><div class="info-label">Ilustrator</div><div class="info-value">Shinji Kanda</div></div>
+        <div class="info-item"><div class="info-label">Rilis</div><div class="info-value">Juni 2023</div></div>
+      </div>
+    </div>
+    <div class="note">Salah satu IR paling ikonik di era Scarlet & Violet.</div>
+  </div>
+  <div class="handle">@gokatrades</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 06 - Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF;
+  }
+  .blurred-bg {
+    position: absolute; top: -80px; left: -80px;
+    width: calc(100% + 160px); height: calc(100% + 160px);
+    background-image: url('../../images/5287492.jpg');
+    background-size: cover; background-position: center;
+    filter: blur(35px) brightness(0.3) saturate(0.7); z-index: 0;
+  }
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: rgba(255, 68, 68, 0.9); padding: 10px 18px; border-radius: 4px;
+  }
+  .handle {
+    position: absolute; bottom: 24px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .page-content {
+    position: relative; z-index: 2; width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 50px 0;
+  }
+  .section-label {
+    font-size: 26px; font-weight: 700; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 12px; margin-bottom: 60px;
+  }
+  .section-underline { display: block; width: 70px; height: 4px; background: #FF4444; margin: 14px auto 0; }
+  .content-area { display: flex; gap: 52px; padding: 0 56px; width: 100%; }
+  .reasons-list { flex: 1; display: flex; flex-direction: column; gap: 52px; }
+  .reason-item { border-left: 6px solid #FF4444; padding-left: 30px; }
+  .reason-title {
+    font-size: 40px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px;
+  }
+  .reason-desc { font-size: 28px; font-weight: 400; color: #A0A0A0; line-height: 1.45; }
+  .card-side { display: flex; align-items: center; flex-shrink: 0; }
+  .card-img { width: 370px; border-radius: 18px; box-shadow: 0 24px 70px rgba(0,0,0,0.5); }
+  .summary {
+    width: calc(100% - 112px); text-align: center;
+    font-size: 30px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.5; padding: 34px 44px; margin-top: 56px;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+  }
+  .summary .hl { color: #22C55E; }
+</style>
+</head>
+<body>
+  <div class="blurred-bg"></div>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="page-content">
+    <div class="section-label">KENAPA HARGANYA NAIK<span class="section-underline"></span></div>
+    <div class="content-area">
+      <div class="reasons-list">
+        <div class="reason-item"><div class="reason-title">Artwork</div><div class="reason-desc">Scene air terjun karya Shinji Kanda — salah satu IR paling detail.</div></div>
+        <div class="reason-item"><div class="reason-title">Raw vs PSA 10</div><div class="reason-desc">Raw cuma 10.4% dari harga PSA 10. Gap $2,824 — potensi grading besar.</div></div>
+        <div class="reason-item"><div class="reason-title">Supply</div><div class="reason-desc">Paldea Evolved hampir 3 tahun. Sealed makin langka.</div></div>
+      </div>
+      <div class="card-side"><img class="card-img" src="../../images/5287492.jpg" alt="Magikarp IR"></div>
+    </div>
+    <div class="summary">Tekanan permintaan <span class="hl">6.2%</span> dengan supply turun <span class="hl">9%</span>. Kartu ini punya momentum.</div>
+  </div>
+  <div class="handle">@gokatrades</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 04 - Graded Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF;
+  }
+  .blurred-bg {
+    position: absolute; top: -80px; left: -80px;
+    width: calc(100% + 160px); height: calc(100% + 160px);
+    background-image: url('../../images/5287492.jpg');
+    background-size: cover; background-position: center;
+    filter: blur(35px) brightness(0.3) saturate(0.7); z-index: 0;
+  }
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: rgba(255, 68, 68, 0.9); padding: 10px 18px; border-radius: 4px;
+  }
+  .handle {
+    position: absolute; bottom: 24px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .page-content {
+    position: relative; z-index: 2; width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 50px 0;
+  }
+  .section-label {
+    font-size: 24px; font-weight: 700; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 12px; margin-bottom: 42px;
+  }
+  .section-underline { display: block; width: 70px; height: 4px; background: #FF4444; margin: 14px auto 0; }
+  .card-display { display: flex; justify-content: center; margin-bottom: 52px; }
+  .card-img { width: 360px; border-radius: 18px; box-shadow: 0 24px 70px rgba(0,0,0,0.5); }
+  .price-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 26px; padding: 0 46px; margin-bottom: 52px; width: 100%;
+  }
+  .price-card {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px; padding: 36px 24px; text-align: center;
+  }
+  .price-card-label {
+    font-size: 22px; font-weight: 600; color: #A0A0A0;
+    text-transform: uppercase; letter-spacing: 3px; margin-bottom: 14px;
+  }
+  .price-card-value { font-size: 60px; font-weight: 700; color: #FFFFFF; line-height: 1.1; }
+  .price-card-value.green { color: #22C55E; }
+  .price-card-value.red { color: #FF4444; }
+  .price-card-sub { font-size: 20px; font-weight: 400; color: #A0A0A0; margin-top: 8px; }
+  .pop-section { padding: 0 46px; width: 100%; }
+  .pop-title {
+    text-align: center; font-size: 24px; font-weight: 700;
+    color: #A0A0A0; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 28px;
+  }
+  .pop-title span { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.3); }
+  .pop-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px; }
+  .pop-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px; padding: 28px 20px; text-align: center;
+  }
+  .pop-label {
+    font-size: 18px; font-weight: 600; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;
+  }
+  .pop-value { font-size: 52px; font-weight: 700; color: #FFFFFF; }
+</style>
+</head>
+<body>
+  <div class="blurred-bg"></div>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="page-content">
+    <div class="section-label">RINCIAN GRADED<span class="section-underline"></span></div>
+    <div class="card-display"><img class="card-img" src="../../images/5287492.jpg" alt="Magikarp IR"></div>
+    <div class="price-grid">
+      <div class="price-card"><div class="price-card-label">PSA 9</div><div class="price-card-value">$454.97</div><div class="price-card-sub">Near Mint</div></div>
+      <div class="price-card"><div class="price-card-label">PSA 10</div><div class="price-card-value green">$3,152</div><div class="price-card-sub">Gem Mint</div></div>
+      <div class="price-card"><div class="price-card-label">Gem Rate</div><div class="price-card-value red">16.7%</div><div class="price-card-sub">Rasio PSA 10</div></div>
+    </div>
+    <div class="pop-section">
+      <div class="pop-title">POPULASI PSA <span>(per 29 Mar 2026)</span></div>
+      <div class="pop-grid">
+        <div class="pop-card"><div class="pop-label">PSA 10 Pop</div><div class="pop-value">3,881</div></div>
+        <div class="pop-card"><div class="pop-label">PSA 9 Pop</div><div class="pop-value">12,136</div></div>
+        <div class="pop-card"><div class="pop-label">Total Pop</div><div class="pop-value">23,300</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="handle">@gokatrades</div>
+</body>
+</html>
