@@ -1,0 +1,54 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "GokaTrades Website (static)",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "WEBSITE"],
+      "port": 8080,
+      "cwd": "."
+    },
+    {
+      "name": "Remotion Studio (my-video)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000,
+      "cwd": "gokatrades Reels/my-video"
+    },
+    {
+      "name": "Mega Greninja Premium Collection",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8090", "--directory", "Goka Trades Feed Posts/Mega Greninja ex Premium Collection"],
+      "port": 8090,
+      "cwd": "."
+    },
+    {
+      "name": "Top 10 PSA10 Gains",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8091", "--directory", "Goka Trades Feed Posts/Top 10 PSA10 Gains"],
+      "port": 8091,
+      "cwd": "."
+    },
+    {
+      "name": "Pokemon Sets Matrix",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8092", "--directory", "Goka Trades Feed Posts/Pokemon Sets Matrix"],
+      "port": 8092,
+      "cwd": "."
+    },
+    {
+      "name": "Remotion Studio (mega-greninja-reel)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "3001"],
+      "port": 3001,
+      "cwd": "gokatrades Reels/mega-greninja-reel"
+    },
+    {
+      "name": "Remotion Studio (pokemon-trend-2026-reel)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "3002"],
+      "port": 3002,
+      "cwd": "gokatrades Reels/pokemon-trend-2026-reel"
+    }
+  ]
+}

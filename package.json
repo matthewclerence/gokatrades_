@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "export:greninja": "node \"Goka Trades Feed Posts/Mega Greninja ex Premium Collection/export.mjs\"",
+    "export:top10": "node \"Goka Trades Feed Posts/Top 10 PSA10 Gains/export.mjs\""
+  },
   "dependencies": {
     "puppeteer": "^24.40.0"
   },

@@ -84,19 +84,33 @@
 
 Space Grotesk (Google Font) — used for everything.
 
-### Hierarchy
+### Canonical Carousel Hierarchy (1080x1440 Instagram portrait)
 
-* **Headlines:** Space Grotesk, Bold (700), 36–48px, ALL CAPS
-* **Subheadings:** Space Grotesk, Semi-Bold (600), 24–32px, Sentence case
-* **Body Text:** Space Grotesk, Regular (400), 16–20px, Sentence case
-* **CTA Text:** Space Grotesk, Bold (700), 20–28px, ALL CAPS
+These are the locked, consistent sizes across every carousel — educational and statistics variants alike. Match exactly. Do not scale up or down per post.
+
+| Element | Size | Weight | Color | Notes |
+|---|---|---|---|---|
+| **Slide 1 hook headline** | **148px** | 700 | #FFFFFF + 1 red word | 3 lines, ≤9 chars/line, ALL CAPS, letter-spacing -4px, line-height 0.92 |
+| **Slide 1 hero card image** | **height 960px** | — | — | Centered, drop-shadow, 24px radius, bleeds under headline |
+| Body set/card name (slides 2–3) | 108px | 700 | #FFFFFF | ALL CAPS, letter-spacing -2px, line-height 0.95 |
+| Body subtitle / red tag | 32px | 700 | #FF4444 | ALL CAPS, letter-spacing 3px |
+| Body detail value | 40px | 700 | #FFFFFF | line-height 1.1 |
+| Body detail label | 20px | 700 | #FF4444 | ALL CAPS, letter-spacing 4px |
+| Section header | 28–32px | 700 | #FF4444 | ALL CAPS, letter-spacing 5–6px, with 70–80px red underline |
+| Large price / stat number | 96–140px | 700 | #FF4444 / #FFFFFF | line-height 1.0 |
+| Footnote / supporting body | 22–24px | 400 | #C8C8C8 / #E8E8E8 | line-height 1.4 |
+| Brand watermark badge | 18px | 700 | #FFFFFF on #FF4444 | ALL CAPS, letter-spacing 2px, 8px 16px padding |
+| Swipe indicator | 24px | 700 | #FFFFFF @ 0.85 | letter-spacing 4px |
+| @gokatrades handle | 20px | 600 | rgba(255,255,255,0.55) | bottom-right |
 
 ### Text Rules
 
-* Maximum 8 words on hook slides
+* Maximum 8 words on hook slides — Slide 1 headline is 3 lines of ≤9 chars each
 * Maximum 15 words on body slides
-* Minimum text size: 16px
+* Minimum text size: 18px (badge minimum); nothing below 14px ever
 * Always maintain high contrast — white on dark, black on white
+* Red (#FF4444) appears exactly once per slide as the accent — never more
+* **Consistency rule:** every carousel uses the Canonical Hierarchy above. The Abyss Eye and Mega Delphox baselines are the reference — new posts must match, not re-invent.
 
 \---
 
@@ -130,33 +144,39 @@ Black, white, and red colour tone. High contrast. Everything sharp and premium.
 
 ### Dimensions
 
-* Instagram Square: 1080x1080
-* Instagram Portrait: 1080x1350 (primary format)
+* Instagram Carousel (primary): **1080x1440**
 * Instagram Stories: 1080x1920
 
-### Layout Structure
+### Canvas & Background (every slide)
 
-Two-zone layout:
+* Base background: #111111
+* Blurred product image layer: full-bleed, `blur(50px) brightness(0.22)`, extended -60px on all sides to hide edges
+* GOKATRADES red badge top-left (24px inset) and @gokatrades handle bottom-right (30/36px inset) on every slide
+* 60px minimum safe zone on all four sides for text/content
 
-* **Top zone (\~60%):** Card imagery with blurred card art background, price movement arrows (red/green), cards fanned and overlapping.
-* **Bottom zone (\~40%):** Solid white banner block with bold black headline text, red accent for key words.
+### Slide 1 Hook — Canonical Layout
 
-### Text Positioning
+* **Card hero:** 960px tall, centered at 38% vertical (via translate -50%), drop-shadow `0 25px 70px rgba(0,0,0,0.85)`, 24px border radius
+* **Gradient overlay:** bottom 48% of slide, fades from rgba(0,0,0,0.97) at bottom to transparent at top
+* **Headline block:** absolute, bottom 130px, left/right 60px
+* **Headline:** 148px / 700 / line-height 0.92 / letter-spacing -4px / text-shadow `0 8px 40px rgba(0,0,0,0.85)`
+* **Three lines, ≤9 characters each.** First line is the red accent word/phrase, lines 2–3 white.
+* **GESER >>>>>** at bottom-left (60px inset, 50px from bottom), 24px / 700 / letter-spacing 4px / opacity 0.85
 
-* Bottom of slide inside the white banner block. Centred.
-* Text does NOT overlay card images — it sits in its own clean space.
-* CTA text ("SWIPE >>>>>") sits below the white block on dark background, centred.
+### Slide 2 & 3 Body — Canonical Two-Column Layout
 
-### Margins and Safe Zones
-
-* 60px minimum safe zone on all sides inside the white text block.
-* Card imagery can bleed closer to edges.
+* `.slide-inner` flex column, padding 80px 70px, centered
+* Section header centered at top (red underline 70–80px × 3px, 50px margin below)
+* `.content-row` flex, gap 50px, max-width 980px
+* Left column: card / pack image, flex-basis 400px, width 400px, border-radius 12px, drop-shadow `0 20px 60px rgba(0,0,0,0.75)`
+* Right column: flex 1, column gap 28px
+* Body matches Canonical Hierarchy exactly (card name 108px, label 20px, value 40px)
 
 ### Density
 
-* Dense in the card zone — pack in the visual value.
-* Clean and bold in the text zone — no clutter.
-* Max elements per slide: card showcase (2–3 cards) + price arrows + white text block + CTA.
+* Dense in the card/image zone — the card is the hero
+* Clean and bold in the text zone — no clutter
+* Max elements per body slide: 1 hero image + section header + 4–5 label/value rows + 1 footnote
 
 \---
 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 01 - Pokemon vs Saham Indonesia Hook</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF;
+  }
+
+  .split-left {
+    position: absolute; top: 130px; left: 0; width: 50%; height: 700px;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 2;
+  }
+  .split-right {
+    position: absolute; top: 130px; right: 0; width: 50%; height: 700px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 2; padding: 30px 40px 30px 20px; gap: 10px;
+  }
+
+  .divider {
+    position: absolute; top: 180px; left: 50%;
+    width: 1px; height: 600px;
+    background: rgba(255,255,255,0.18); z-index: 1;
+  }
+
+  .card-img {
+    max-width: 380px; width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.75);
+  }
+
+  .ticker-stack {
+    width: 100%; max-width: 420px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .ticker-header {
+    font-size: 16px; font-weight: 700; color: rgba(255,255,255,0.5);
+    letter-spacing: 4px; text-transform: uppercase;
+    margin-bottom: 4px; text-align: center;
+  }
+  .ticker-row {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .ticker-code {
+    font-size: 26px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.5px;
+  }
+  .ticker-name {
+    font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.55);
+    letter-spacing: 1px; text-transform: uppercase;
+    margin-left: 12px; flex: 1;
+  }
+  .ticker-change {
+    font-size: 18px; font-weight: 700; color: #22C55E; letter-spacing: -0.5px;
+  }
+  .ticker-change.down { color: #FF4444; }
+
+  .vs-badge {
+    position: absolute; top: 420px; left: 50%; transform: translateX(-50%);
+    z-index: 5;
+    width: 110px; height: 110px; border-radius: 50%;
+    background: #FF4444;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 30px rgba(255,68,68,0.45);
+  }
+  .vs-badge span {
+    font-size: 38px; font-weight: 700; color: #FFFFFF; letter-spacing: 2px;
+  }
+
+  .text-zone {
+    position: absolute; z-index: 4; bottom: 160px; left: 50px; right: 50px;
+  }
+  .sub-tag {
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.65);
+    text-transform: uppercase; letter-spacing: 6px;
+    margin-bottom: 20px; text-align: center;
+  }
+  .headline {
+    font-weight: 700; text-transform: uppercase; line-height: 0.95;
+    letter-spacing: -2.5px; text-align: center;
+  }
+  .headline .line { display: block; font-size: 82px; color: #FFFFFF; }
+  .headline .red { color: #FF4444; }
+
+  .swipe-cta {
+    position: absolute; bottom: 54px; left: 50px;
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.45);
+    text-transform: uppercase; letter-spacing: 6px; z-index: 5;
+  }
+
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: #FF4444; padding: 10px 18px; border-radius: 4px;
+  }
+  .series-tag {
+    position: absolute; top: 82px; left: 24px; z-index: 10;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 4px;
+    color: #FFFFFF; line-height: 1;
+  }
+  .handle {
+    position: absolute; bottom: 54px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+</style>
+</head>
+<body>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="series-tag">MISC #5 · POKEMON VS SAHAM INDO</div>
+
+  <div class="divider"></div>
+
+  <div class="split-left">
+    <img class="card-img" src="../../../IMAGES/graded/1.jpg" alt="Pokemon Card">
+  </div>
+
+  <div class="split-right">
+    <div class="ticker-stack">
+      <div class="ticker-header">IDX · Blue Chips</div>
+      <div class="ticker-row">
+        <span class="ticker-code">BBCA</span>
+        <span class="ticker-name">Bank Central Asia</span>
+        <span class="ticker-change">+8,2%</span>
+      </div>
+      <div class="ticker-row">
+        <span class="ticker-code">BBRI</span>
+        <span class="ticker-name">Bank Rakyat Indo</span>
+        <span class="ticker-change">+5,1%</span>
+      </div>
+      <div class="ticker-row">
+        <span class="ticker-code">TLKM</span>
+        <span class="ticker-name">Telkom Indonesia</span>
+        <span class="ticker-change down">−2,4%</span>
+      </div>
+      <div class="ticker-row">
+        <span class="ticker-code">ASII</span>
+        <span class="ticker-name">Astra International</span>
+        <span class="ticker-change">+3,6%</span>
+      </div>
+      <div class="ticker-row">
+        <span class="ticker-code">UNVR</span>
+        <span class="ticker-name">Unilever Indonesia</span>
+        <span class="ticker-change down">−6,8%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="vs-badge"><span>VS</span></div>
+
+  <div class="text-zone">
+    <div class="sub-tag">5 Tahun Terakhir · Data Historis</div>
+    <div class="headline">
+      <span class="line">LEBIH CENGLI</span>
+      <span class="line">KARTU POKEMON</span>
+      <span class="line">ATAU <span class="red">SAHAM INDO?</span></span>
+    </div>
+  </div>
+
+  <div class="swipe-cta">GESER &gt;&gt;&gt;&gt;&gt;</div>
+  <div class="handle">@gokatrades</div>
+</body>
+</html>

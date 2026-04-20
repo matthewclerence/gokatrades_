@@ -1,0 +1,23 @@
+{
+  "name": "mega-greninja-reel",
+  "version": "1.0.0",
+  "description": "GokaTrades Format 1 Faceless News Reel — Mega Greninja ex Premium Collection release",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.448",
+    "@remotion/media-utils": "^4.0.448",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.448"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render MegaGreninjaReel out/mega-greninja-reel.mp4"
+  }
+}

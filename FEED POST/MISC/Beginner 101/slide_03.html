@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 03 - JP Alternative</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF; }
+
+  .section-label {
+    position: absolute; top: 170px; left: 60px; z-index: 5;
+    font-size: 24px; font-weight: 700; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 10px;
+  }
+  .section-label::after {
+    content: ''; display: block; width: 70px; height: 4px;
+    background: #FF4444; margin-top: 14px;
+  }
+
+  .headline {
+    position: absolute; top: 240px; left: 60px; right: 60px; z-index: 5;
+    font-size: 88px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.0; letter-spacing: -3px; text-transform: uppercase;
+  }
+  .headline .red { color: #FF4444; }
+
+  .comparison {
+    position: absolute; top: 520px; left: 60px; right: 60px; z-index: 4;
+    display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px;
+    align-items: center;
+  }
+  .comp-col {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 36px 30px; text-align: center;
+  }
+  .comp-col.en { border-color: rgba(255,68,68,0.35); }
+  .comp-col.jp { border-color: rgba(34,197,94,0.35); }
+
+  .comp-lang {
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px;
+  }
+  .comp-lang.en { color: #FF4444; }
+  .comp-lang.jp { color: #22C55E; }
+
+  .comp-price {
+    font-size: 52px; font-weight: 700; color: #FFFFFF;
+    letter-spacing: -2px; line-height: 1; margin-bottom: 8px;
+  }
+  .comp-unit {
+    font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.55);
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 22px;
+  }
+  .comp-count {
+    font-size: 24px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .comp-count-label {
+    font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.55);
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  .arrow-vs {
+    font-size: 36px; font-weight: 700; color: rgba(255,255,255,0.3);
+    letter-spacing: 4px;
+  }
+
+  .payoff {
+    position: absolute; top: 930px; left: 60px; right: 60px; z-index: 4;
+    background: rgba(34,197,94,0.08);
+    border: 1px solid rgba(34,197,94,0.3);
+    border-radius: 14px;
+    padding: 28px 32px;
+    text-align: center;
+  }
+  .payoff-label {
+    font-size: 14px; font-weight: 700; color: #22C55E;
+    letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .payoff-main {
+    font-size: 40px; font-weight: 700; color: #FFFFFF;
+    letter-spacing: -1px; line-height: 1.15;
+  }
+  .payoff-main strong { color: #22C55E; }
+
+  .body-note {
+    position: absolute; bottom: 130px; left: 60px; right: 60px; z-index: 5;
+    font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.75);
+    line-height: 1.4; text-align: center;
+  }
+
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: #FF4444; padding: 10px 18px; border-radius: 4px;
+  }
+  .series-tag {
+    position: absolute; top: 82px; left: 24px; z-index: 10;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 4px;
+    color: #FFFFFF; line-height: 1;
+  }
+  .handle {
+    position: absolute; bottom: 54px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .page-no {
+    position: absolute; bottom: 54px; left: 60px;
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.35);
+    letter-spacing: 4px; z-index: 10;
+  }
+</style>
+</head>
+<body>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="series-tag">MISC #4 · BEGINNER 101</div>
+
+  <div class="section-label">ALTERNATIF #1</div>
+  <div class="headline">JP: MODAL<br>SAMA, DAPAT<br><span class="red">2-3× LEBIH</span></div>
+
+  <div class="comparison">
+    <div class="comp-col en">
+      <div class="comp-lang en">English (EN)</div>
+      <div class="comp-price">Rp 5,5jt</div>
+      <div class="comp-unit">per Booster Box</div>
+      <div class="comp-count">1 box 151</div>
+      <div class="comp-count-label">yang dibeli</div>
+    </div>
+    <div class="arrow-vs">→</div>
+    <div class="comp-col jp">
+      <div class="comp-lang jp">Japanese (JP)</div>
+      <div class="comp-price">Rp 1,8jt</div>
+      <div class="comp-unit">per Booster Box</div>
+      <div class="comp-count">2-3 box JP</div>
+      <div class="comp-count-label">yang dibeli</div>
+    </div>
+  </div>
+
+  <div class="payoff">
+    <div class="payoff-label">Artinya</div>
+    <div class="payoff-main">Rp 5,5jt di JP = <strong>lebih banyak pack</strong> dibuka + lebih banyak variasi kartu.</div>
+  </div>
+
+  <div class="body-note">Harga JP booster box ~Rp 1,5–2jt tergantung set. Pull rate JP juga lebih "ramah" beginner.</div>
+
+  <div class="page-no">03/07</div>
+  <div class="handle">@gokatrades</div>
+</body>
+</html>

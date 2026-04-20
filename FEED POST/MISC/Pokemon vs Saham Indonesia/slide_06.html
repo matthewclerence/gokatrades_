@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 06 - Verdict</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF; }
+
+  .section-label {
+    position: absolute; top: 170px; left: 60px; z-index: 5;
+    font-size: 24px; font-weight: 700; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 10px;
+  }
+  .section-label::after {
+    content: ''; display: block; width: 70px; height: 4px;
+    background: #FF4444; margin-top: 14px;
+  }
+
+  .headline {
+    position: absolute; top: 240px; left: 60px; right: 60px; z-index: 5;
+    font-size: 88px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.0; letter-spacing: -3px; text-transform: uppercase;
+  }
+  .headline .red { color: #FF4444; }
+
+  .verdict-grid {
+    position: absolute; top: 520px; left: 60px; right: 60px; z-index: 4;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  .v-col {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 32px 30px;
+  }
+  .v-col.saham { border-top: 4px solid #22C55E; }
+  .v-col.kartu { border-top: 4px solid #FF4444; }
+
+  .v-title {
+    font-size: 28px; font-weight: 700; color: #FFFFFF;
+    letter-spacing: -0.5px; margin-bottom: 20px;
+  }
+  .v-title.green { color: #22C55E; }
+  .v-title.red { color: #FF4444; }
+
+  .v-section-label {
+    font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.45);
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-top: 18px; margin-bottom: 10px;
+  }
+
+  .v-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 16px; font-weight: 500; color: rgba(255,255,255,0.85);
+    line-height: 1.4; margin-bottom: 8px;
+  }
+  .v-icon {
+    flex-shrink: 0; width: 18px; height: 18px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700; margin-top: 2px;
+  }
+  .v-icon.plus { color: #22C55E; }
+  .v-icon.minus { color: #FF4444; }
+
+  .verdict-banner {
+    position: absolute; bottom: 150px; left: 60px; right: 60px; z-index: 5;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 14px;
+    padding: 26px 32px;
+    text-align: center;
+  }
+  .verdict-banner-label {
+    font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.5);
+    letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .verdict-banner-main {
+    font-size: 28px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.3; letter-spacing: -0.5px;
+  }
+  .verdict-banner-main .red { color: #FF4444; }
+
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: #FF4444; padding: 10px 18px; border-radius: 4px;
+  }
+  .series-tag {
+    position: absolute; top: 82px; left: 24px; z-index: 10;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 4px;
+    color: #FFFFFF; line-height: 1;
+  }
+  .handle {
+    position: absolute; bottom: 54px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .page-no {
+    position: absolute; bottom: 54px; left: 60px;
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.35);
+    letter-spacing: 4px; z-index: 10;
+  }
+</style>
+</head>
+<body>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="series-tag">MISC #5 · POKEMON VS SAHAM INDO</div>
+
+  <div class="section-label">KESIMPULAN</div>
+  <div class="headline">DUA-DUANYA<br>PUNYA <span class="red">TRADE-OFF</span></div>
+
+  <div class="verdict-grid">
+    <div class="v-col saham">
+      <div class="v-title green">Saham Indonesia</div>
+      <div class="v-section-label">Kelebihan</div>
+      <div class="v-item"><span class="v-icon plus">+</span>Likuiditas tinggi, jual 1 menit</div>
+      <div class="v-item"><span class="v-icon plus">+</span>Dividen reguler (cash flow)</div>
+      <div class="v-item"><span class="v-icon plus">+</span>Regulasi OJK, lebih protected</div>
+      <div class="v-section-label">Kekurangan</div>
+      <div class="v-item"><span class="v-icon minus">−</span>Return rata-rata lebih modest</div>
+      <div class="v-item"><span class="v-icon minus">−</span>Bukan "barang fisik" yang dikoleksi</div>
+    </div>
+    <div class="v-col kartu">
+      <div class="v-title red">Kartu Pokémon</div>
+      <div class="v-section-label">Kelebihan</div>
+      <div class="v-item"><span class="v-icon plus">+</span>Potensi return jauh lebih tinggi</div>
+      <div class="v-item"><span class="v-icon plus">+</span>Bisa dinikmati sebagai koleksi</div>
+      <div class="v-item"><span class="v-icon plus">+</span>Pasar global, hedge rupiah</div>
+      <div class="v-section-label">Kekurangan</div>
+      <div class="v-item"><span class="v-icon minus">−</span>Likuiditas rendah, butuh buyer</div>
+      <div class="v-item"><span class="v-icon minus">−</span>Resiko fake, grading, storage</div>
+    </div>
+  </div>
+
+  <div class="verdict-banner">
+    <div class="verdict-banner-label">Verdict</div>
+    <div class="verdict-banner-main">Bukan soal mana "lebih cengli" — soal <span class="red">tujuan finansialmu</span>.</div>
+  </div>
+
+  <div class="page-no">06/07</div>
+  <div class="handle">@gokatrades</div>
+</body>
+</html>

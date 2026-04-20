@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 05 - Fake Risk</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF; }
+
+  .section-label {
+    position: absolute; top: 170px; left: 60px; z-index: 5;
+    font-size: 24px; font-weight: 700; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 10px;
+  }
+  .section-label::after {
+    content: ''; display: block; width: 70px; height: 4px;
+    background: #FF4444; margin-top: 14px;
+  }
+
+  .headline {
+    position: absolute; top: 240px; left: 60px; right: 60px; z-index: 5;
+    font-size: 88px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.0; letter-spacing: -3px; text-transform: uppercase;
+  }
+  .headline .red { color: #FF4444; }
+
+  .risk-grid {
+    position: absolute; top: 520px; left: 60px; right: 60px; z-index: 4;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px;
+  }
+  .risk-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 28px 22px;
+    text-align: center;
+  }
+  .risk-lang {
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px;
+  }
+  .risk-lang.high { color: #FF4444; }
+  .risk-lang.med { color: #FFCB05; }
+  .risk-lang.low { color: #22C55E; }
+
+  .risk-meter {
+    width: 100%; height: 120px;
+    display: flex; align-items: flex-end; justify-content: center;
+    margin-bottom: 18px; gap: 4px;
+  }
+  .risk-bar {
+    width: 16px; background: rgba(255,255,255,0.15);
+    border-radius: 2px;
+  }
+  .risk-bar.active.high { background: #FF4444; }
+  .risk-bar.active.med { background: #FFCB05; }
+  .risk-bar.active.low { background: #22C55E; }
+
+  .risk-level {
+    font-size: 26px; font-weight: 700; color: #FFFFFF;
+    letter-spacing: -0.5px; margin-bottom: 6px;
+  }
+  .risk-desc {
+    font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.7);
+    line-height: 1.4;
+  }
+
+  .body-note {
+    position: absolute; top: 970px; left: 60px; right: 60px; z-index: 5;
+    font-size: 24px; font-weight: 500; color: #FFFFFF;
+    line-height: 1.45;
+    background: rgba(255,68,68,0.08);
+    border-left: 4px solid #FF4444;
+    padding: 26px 30px;
+    border-radius: 8px;
+  }
+  .body-note strong { color: #FF4444; }
+
+  .footer-note {
+    position: absolute; bottom: 130px; left: 60px; right: 60px; z-index: 5;
+    font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.6);
+    line-height: 1.4; text-align: center; font-style: italic;
+  }
+
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: #FF4444; padding: 10px 18px; border-radius: 4px;
+  }
+  .series-tag {
+    position: absolute; top: 82px; left: 24px; z-index: 10;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 4px;
+    color: #FFFFFF; line-height: 1;
+  }
+  .handle {
+    position: absolute; bottom: 54px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .page-no {
+    position: absolute; bottom: 54px; left: 60px;
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.35);
+    letter-spacing: 4px; z-index: 10;
+  }
+</style>
+</head>
+<body>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="series-tag">MISC #4 · BEGINNER 101</div>
+
+  <div class="section-label">RESIKO FAKE</div>
+  <div class="headline">BAHASA MANA<br><span class="red">PALING AMAN</span>?</div>
+
+  <div class="risk-grid">
+    <div class="risk-card">
+      <div class="risk-lang high">English</div>
+      <div class="risk-meter">
+        <div class="risk-bar active high" style="height: 100%"></div>
+        <div class="risk-bar active high" style="height: 100%"></div>
+        <div class="risk-bar active high" style="height: 100%"></div>
+        <div class="risk-bar active high" style="height: 100%"></div>
+        <div class="risk-bar active high" style="height: 100%"></div>
+      </div>
+      <div class="risk-level">TINGGI</div>
+      <div class="risk-desc">Paling banyak fake beredar. Fake proxy + reprint abu-abu.</div>
+    </div>
+    <div class="risk-card">
+      <div class="risk-lang med">Japanese</div>
+      <div class="risk-meter">
+        <div class="risk-bar active med" style="height: 50%"></div>
+        <div class="risk-bar active med" style="height: 50%"></div>
+        <div class="risk-bar" style="height: 100%"></div>
+        <div class="risk-bar" style="height: 100%"></div>
+        <div class="risk-bar" style="height: 100%"></div>
+      </div>
+      <div class="risk-level">SEDANG</div>
+      <div class="risk-desc">Ada fake tapi lebih sedikit. QC packaging lebih ketat.</div>
+    </div>
+    <div class="risk-card">
+      <div class="risk-lang low">KR / CN</div>
+      <div class="risk-meter">
+        <div class="risk-bar active low" style="height: 30%"></div>
+        <div class="risk-bar" style="height: 100%"></div>
+        <div class="risk-bar" style="height: 100%"></div>
+        <div class="risk-bar" style="height: 100%"></div>
+        <div class="risk-bar" style="height: 100%"></div>
+      </div>
+      <div class="risk-level">RENDAH</div>
+      <div class="risk-desc">Pasar niche = fakers kurang tertarik. Aman buat belajar.</div>
+    </div>
+  </div>
+
+  <div class="body-note">Selalu beli dari <strong>toko resmi</strong> atau seller terverifikasi — apapun bahasanya.</div>
+
+  <div class="footer-note">*Estimasi berdasarkan pengamatan pasar Indonesia — bukan statistik resmi.</div>
+
+  <div class="page-no">05/07</div>
+  <div class="handle">@gokatrades</div>
+</body>
+</html>

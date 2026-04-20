@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 04 - Card Grid</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; background: #111111; font-family: 'Space Grotesk', sans-serif; color: #FFFFFF; }
+  .stage { position: relative; width: 1080px; height: 1440px; background: #111111; overflow: hidden; }
+
+  .section-label {
+    position: absolute; top: 170px; left: 60px;
+    font-size: 22px; font-weight: 700; color: #FF4444;
+    letter-spacing: 10px; text-transform: uppercase; z-index: 5;
+  }
+  .section-label::after {
+    content: ''; display: block; width: 70px; height: 4px;
+    background: #FF4444; margin-top: 14px;
+  }
+
+  .headline {
+    position: absolute; top: 240px; left: 60px; right: 60px; z-index: 5;
+    font-size: 78px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.0; letter-spacing: -3px; text-transform: uppercase;
+  }
+  .headline .red { color: #FF4444; }
+
+  .grid {
+    position: absolute; top: 470px; left: 60px; right: 60px; z-index: 4;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px;
+  }
+  .card-slot {
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .card-img {
+    width: 100%; aspect-ratio: 0.72;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 36px rgba(0,0,0,0.6);
+    margin-bottom: 10px;
+  }
+  .card-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .card-name {
+    font-size: 16px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.3px;
+    text-align: center; line-height: 1.1; margin-bottom: 2px;
+  }
+  .card-tag {
+    font-size: 11px; font-weight: 700; color: #FF4444;
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+  .card-tag.mute { color: rgba(255,255,255,0.5); }
+
+  .body-note {
+    position: absolute; bottom: 120px; left: 60px; right: 60px;
+    font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.75);
+    line-height: 1.4;
+  }
+  .body-note .highlight { color: #FF4444; font-weight: 700; }
+
+  .watermark {
+    position: absolute; top: 24px; left: 24px;
+    background: #FF4444; color: #FFFFFF;
+    font-weight: 700; font-size: 22px; letter-spacing: 2px;
+    padding: 10px 18px; border-radius: 4px; z-index: 5;
+  }
+  .series-tag {
+    position: absolute; top: 82px; left: 24px;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 4px;
+    color: #FFFFFF; line-height: 1; z-index: 5;
+  }
+  .handle {
+    position: absolute; bottom: 54px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 5;
+  }
+  .page-no {
+    position: absolute; bottom: 54px; left: 60px;
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.35);
+    letter-spacing: 4px; z-index: 5;
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="watermark">GOKATRADES</div>
+    <div class="series-tag">NEWS · CHINA TCG</div>
+
+    <div class="section-label">HIGHLIGHT</div>
+    <div class="headline">4 IR EKSKLUSIF<br>+ <span class="red">REPRINTS</span></div>
+
+    <div class="grid">
+      <div class="card-slot">
+        <div class="card-img"><img src="../../../IMAGES/gem-pack-5/friede_pikachu_ir.png" alt="Captain Pikachu IR"></div>
+        <div class="card-name">Captain Pikachu</div>
+        <div class="card-tag">IR BARU · ALT ART</div>
+      </div>
+      <div class="card-slot">
+        <div class="card-img"><img src="../../../IMAGES/gem-pack-5/liko_floragato_ir.png" alt="Floragato IR"></div>
+        <div class="card-name">Floragato</div>
+        <div class="card-tag">IR BARU</div>
+      </div>
+      <div class="card-slot">
+        <div class="card-img"><img src="../../../IMAGES/gem-pack-5/roy_crocalor_ir.png" alt="Crocalor IR"></div>
+        <div class="card-name">Crocalor</div>
+        <div class="card-tag">IR BARU</div>
+      </div>
+      <div class="card-slot">
+        <div class="card-img"><img src="../../../IMAGES/gem-pack-5/dot_quaxwell_ir.png" alt="Quaxwell IR"></div>
+        <div class="card-name">Quaxwell</div>
+        <div class="card-tag">IR BARU</div>
+      </div>
+      <div class="card-slot">
+        <div class="card-img"><img src="../../../IMAGES/gem-pack-5/og_pikachu.jpg" alt="Captain Pikachu OG"></div>
+        <div class="card-name">Captain Pikachu</div>
+        <div class="card-tag mute">Gem Pack 1 · Referensi</div>
+      </div>
+      <div class="card-slot">
+        <div class="card-img"><img src="../../../IMAGES/gem-pack-5/og_sprigatito.jpg" alt="Sprigatito OG"></div>
+        <div class="card-name">Sprigatito</div>
+        <div class="card-tag mute">Gem Pack 1 · Referensi</div>
+      </div>
+    </div>
+
+    <div class="body-note">4 IR baru <span class="highlight">kemungkinan tidak akan rilis di English</span> — eksklusif pasar China.</div>
+
+    <div class="page-no">04/05</div>
+    <div class="handle">@gokatrades</div>
+  </div>
+</body>
+</html>

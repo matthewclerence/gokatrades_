@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 01 - Hook</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative;
+  }
+  .blurred-bg {
+    position: absolute; top: -80px; left: -80px;
+    width: calc(100% + 160px); height: calc(100% + 160px);
+    background-image: url('../../../IMAGES/raw singles/show_blastoise-cosmos-holo-009-165-white-back-starlight-holo-test-print-card-wizards-of-the-coast-era-promos.webp');
+    background-size: cover; background-position: center;
+    filter: blur(28px) brightness(0.35) saturate(0.8); z-index: 0;
+  }
+  .card-img {
+    position: absolute; z-index: 2;
+    top: 60px;
+    left: 50%; transform: translateX(-50%);
+    width: 780px; border-radius: 20px;
+    box-shadow: 0 30px 90px rgba(0,0,0,0.75);
+  }
+  .data-badge {
+    position: absolute; z-index: 3; top: 88px; right: 76px;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .badge-box {
+    background: rgba(255,68,68,0.9); border-radius: 8px;
+    padding: 12px 22px; text-align: center;
+  }
+  .badge-label { font-size: 18px; font-weight: 700; color: #FFFFFF; letter-spacing: 3px; text-transform: uppercase; }
+  .badge-year { font-size: 28px; font-weight: 700; color: #FFFFFF; }
+
+  .text-scrim {
+    position: absolute; z-index: 3;
+    bottom: 0; left: 0; right: 0; height: 820px;
+    background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 45%, transparent 100%);
+  }
+  .text-zone {
+    position: absolute; z-index: 4; bottom: 170px; left: 50px; right: 50px;
+  }
+  .headline {
+    font-weight: 700; text-transform: uppercase; line-height: 0.86;
+    letter-spacing: -4px; text-align: left;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.7);
+  }
+  .headline span { display: block; font-size: 136px; color: #22C55E; }
+  .headline .white { color: #FFFFFF; }
+  .headline .red { color: #FF4444; }
+
+  .swipe-cta {
+    position: absolute; bottom: 124px; left: 50px;
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.35);
+    text-transform: uppercase; letter-spacing: 6px; z-index: 5;
+  }
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: rgba(255, 68, 68, 0.9); padding: 10px 18px; border-radius: 4px;
+  }
+  .series-tag {
+    position: absolute; z-index: 10;
+    top: 86px; left: 36px;
+    font-size: 22px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 5px;
+    color: #FFFFFF; line-height: 1;
+  }
+  .handle {
+    position: absolute; bottom: 124px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+</style>
+</head>
+<body>
+  <div class="blurred-bg"></div>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="series-tag">MISC #4</div>
+
+  <img class="card-img" src="../../../IMAGES/raw singles/show_blastoise-cosmos-holo-009-165-white-back-starlight-holo-test-print-card-wizards-of-the-coast-era-promos.webp" alt="Pokemon Card">
+
+  <div class="data-badge">
+    <div class="badge-box">
+      <div class="badge-label">DATA</div>
+      <div class="badge-year">2026</div>
+    </div>
+  </div>
+
+  <div class="text-scrim"></div>
+  <div class="text-zone">
+    <div class="headline">
+      <span>KARTU</span>
+      <span>POKÉMON</span>
+      <span><span class="white">VS</span></span>
+      <span class="red">JAM MEWAH</span>
+    </div>
+  </div>
+
+  <div class="swipe-cta">GESER &gt;&gt;&gt;&gt;&gt;</div>
+</body>
+</html>

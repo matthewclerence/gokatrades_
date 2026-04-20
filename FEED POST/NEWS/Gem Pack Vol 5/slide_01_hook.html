@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 01 - Gem Pack Vol 5 Hook</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; background: #111111; font-family: 'Space Grotesk', sans-serif; color: #FFFFFF; }
+  .stage { position: relative; width: 1080px; height: 1440px; background: #111111; overflow: hidden; }
+
+  .blurred-bg {
+    position: absolute; inset: 0;
+    background: url('../../../IMAGES/gem-pack-5/pack.png') center/cover no-repeat;
+    filter: blur(40px) brightness(0.32) saturate(0.75);
+    transform: scale(1.18);
+    opacity: 0.7;
+  }
+
+  .hero-wrap {
+    position: absolute; top: 90px; left: 20px; right: 20px; height: 760px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-wrap img {
+    max-height: 760px; width: auto;
+    filter: drop-shadow(0 30px 55px rgba(0,0,0,0.7));
+  }
+
+  .watermark {
+    position: absolute; top: 24px; left: 24px;
+    background: #FF4444; color: #FFFFFF;
+    font-weight: 700; font-size: 22px; letter-spacing: 2px;
+    padding: 10px 18px; border-radius: 4px;
+    z-index: 5;
+  }
+  .series-tag {
+    position: absolute; top: 82px; left: 24px;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 4px;
+    color: #FFFFFF; line-height: 1; z-index: 5;
+  }
+
+  .hook-text {
+    position: absolute; left: 40px; right: 40px; bottom: 160px;
+    text-align: left;
+  }
+  .hook-text h1 {
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.85);
+  }
+  .hook-text h1 .red { color: #FF4444; }
+
+  .geser {
+    position: absolute; left: 40px; bottom: 90px;
+    font-size: 22px; font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 6px;
+  }
+
+  .handle {
+    position: absolute; right: 44px; bottom: 44px;
+    font-size: 22px; font-weight: 600;
+    color: rgba(255,255,255,0.45);
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="blurred-bg"></div>
+    <div class="watermark">GOKATRADES</div>
+    <div class="series-tag">NEWS · CHINA TCG</div>
+
+    <div class="hero-wrap">
+      <img src="../../../IMAGES/gem-pack-5/pack.png" alt="Gem Pack Vol 5 Pack">
+    </div>
+
+    <div class="hook-text">
+      <h1>GEM PACK<br>VOL 5<br><span class="red">24 APRIL</span></h1>
+    </div>
+
+    <div class="geser">GESER &gt;&gt;&gt;&gt;&gt;</div>
+    <div class="handle">@gokatrades</div>
+  </div>
+</body>
+</html>

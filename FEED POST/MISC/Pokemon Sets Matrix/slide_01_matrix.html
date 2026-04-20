@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 01 - Pokemon Sets Matrix</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF;
+  }
+
+  /* Brand marks */
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: #FF4444; padding: 10px 18px; border-radius: 4px;
+  }
+  .handle {
+    position: absolute; bottom: 30px; right: 44px;
+    font-size: 22px; font-weight: 600; color: #A0A0A0; z-index: 10;
+  }
+
+  /* Title — top-left, 2 lines. One red phrase per brand rule. */
+  .title {
+    position: absolute; top: 120px; left: 80px; right: 80px; z-index: 5;
+    font-size: 78px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.0; letter-spacing: -3px;
+  }
+  .title .red { color: #FF4444; }
+
+  /* Series tag — sits directly under the GOKATRADES watermark, top-left. */
+  .series-tag {
+    position: absolute; top: 82px; left: 24px; z-index: 6;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 4px;
+    color: #FFFFFF; line-height: 1;
+  }
+
+  /* Axes — thin white cross */
+  .axis-v {
+    position: absolute; left: 539px; top: 430px;
+    width: 2px; height: 900px; background: #FFFFFF; opacity: 0.45; z-index: 2;
+  }
+  .axis-h {
+    position: absolute; top: 879px; left: 120px;
+    width: 840px; height: 2px; background: #FFFFFF; opacity: 0.45; z-index: 2;
+  }
+
+  /* Arrowheads at axis ends */
+  .arrow { position: absolute; width: 0; height: 0; z-index: 3; opacity: 0.7; }
+  .arrow-up {
+    left: 529px; top: 416px;
+    border-left: 11px solid transparent; border-right: 11px solid transparent;
+    border-bottom: 16px solid #FFFFFF;
+  }
+  .arrow-down {
+    left: 529px; top: 1330px;
+    border-left: 11px solid transparent; border-right: 11px solid transparent;
+    border-top: 16px solid #FFFFFF;
+  }
+  .arrow-left {
+    left: 106px; top: 870px;
+    border-top: 11px solid transparent; border-bottom: 11px solid transparent;
+    border-right: 16px solid #FFFFFF;
+  }
+  .arrow-right {
+    left: 958px; top: 870px;
+    border-top: 11px solid transparent; border-bottom: 11px solid transparent;
+    border-left: 16px solid #FFFFFF;
+  }
+
+  /* Axis-tip labels */
+  .axis-label {
+    position: absolute; font-size: 42px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 5px; z-index: 4;
+  }
+  .label-top    { left: 0; right: 0; top: 350px; text-align: center; }
+  .label-bottom { left: 0; right: 0; top: 1360px; text-align: center; }
+
+  /* Side labels — container-centered on horizontal axis */
+  .v-label-zone {
+    position: absolute; width: 110px; height: 420px;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 4;
+  }
+  .v-label-zone.left  { left: 0;   top: 669px; }
+  .v-label-zone.right { right: 0;  top: 669px; }
+  .v-label {
+    font-size: 42px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 5px;
+    white-space: nowrap; transform: rotate(-90deg);
+  }
+
+  /* Set items — absolutely positioned per axis score */
+  .set-item {
+    position: absolute; z-index: 4;
+    display: flex; flex-direction: column; gap: 8px;
+    align-items: flex-start;
+  }
+  .set-item.align-right { align-items: flex-end; }
+
+  .set-logo {
+    height: 82px; width: auto; max-width: 260px;
+    object-fit: contain;
+  }
+
+  .set-name {
+    font-size: 28px; font-weight: 700; color: #FFFFFF;
+    letter-spacing: -1px; line-height: 1.1; white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+
+  <div class="title">GokaTrades'<br><span class="red">Pokemon Sets</span> Matrix</div>
+
+  <div class="series-tag">MISC #1</div>
+
+  <!-- Axes -->
+  <div class="axis-v"></div>
+  <div class="axis-h"></div>
+  <div class="arrow arrow-up"></div>
+  <div class="arrow arrow-down"></div>
+  <div class="arrow arrow-left"></div>
+  <div class="arrow arrow-right"></div>
+
+  <!-- Axis-tip labels -->
+  <div class="axis-label label-top">Mahal</div>
+  <div class="axis-label label-bottom">Murah</div>
+  <div class="v-label-zone left"><span class="v-label">Buka Pack</span></div>
+  <div class="v-label-zone right"><span class="v-label">Simpan</span></div>
+
+  <!-- Set positions reflect score on both axes.
+       y: smaller = more Mahal; x: smaller left / smaller right = more extreme on that side. -->
+
+  <!-- TOP-LEFT: Mahal + Buka Pack -->
+  <!-- Pokemon 151: very expensive, everyone opens for chases → high, far left -->
+  <div class="set-item" style="left: 120px; top: 470px;">
+    <img class="set-logo" src="../../../IMAGES/sets/set_logo_151.png" alt="Pokemon 151">
+    <div class="set-name">Pokemon 151</div>
+  </div>
+  <!-- Crown Zenith: expensive but less than 151, still opened → mid-high, mid -->
+  <div class="set-item" style="left: 260px; top: 680px;">
+    <img class="set-logo" src="../../../IMAGES/sets/set_logo_crown_zenith.png" alt="Crown Zenith">
+    <div class="set-name">Crown Zenith</div>
+  </div>
+
+  <!-- TOP-RIGHT: Mahal + Simpan -->
+  <!-- Evolving Skies: MOST expensive + best hold (Umbreon VMAX) → corner -->
+  <div class="set-item align-right" style="right: 100px; top: 445px;">
+    <img class="set-logo" src="../../../IMAGES/sets/set_logo_evolving_skies.png" alt="Evolving Skies">
+    <div class="set-name">Evolving Skies</div>
+  </div>
+  <!-- Ascended Heroes: new premium, mid hold conviction → mid-upper -->
+  <div class="set-item align-right" style="right: 250px; top: 680px;">
+    <img class="set-logo" src="../../../IMAGES/sets/set_logo_ascended_heroes.png" alt="Ascended Heroes">
+    <div class="set-name">Ascended Heroes</div>
+  </div>
+
+  <!-- BOTTOM-LEFT: Murah + Buka Pack -->
+  <!-- Paldean Fates: only mildly cheap, huge rip value (shinies) → near axis, far left -->
+  <div class="set-item" style="left: 120px; top: 930px;">
+    <img class="set-logo" src="../../../IMAGES/sets/set_logo_paldean_fates.png" alt="Paldean Fates">
+    <div class="set-name">Paldean Fates</div>
+  </div>
+  <!-- Twilight Masquerade: cheaper, still opened → mid quadrant -->
+  <div class="set-item" style="left: 280px; top: 1140px;">
+    <img class="set-logo" src="../../../IMAGES/sets/set_logo_twilight_masquerade.png" alt="Twilight Masquerade">
+    <div class="set-name">Twilight Masq.</div>
+  </div>
+
+  <!-- BOTTOM-RIGHT: Murah + Simpan -->
+  <!-- Stellar Crown: near-axis hold (Terapagos chase), not too cheap → near axis, mid -->
+  <div class="set-item align-right" style="right: 280px; top: 930px;">
+    <img class="set-logo" src="../../../IMAGES/sets/set_logo_stellar_crown.png" alt="Stellar Crown">
+    <div class="set-name">Stellar Crown</div>
+  </div>
+  <!-- Temporal Forces: cheaper, meta hold → more murah, more simpan -->
+  <div class="set-item align-right" style="right: 130px; top: 1150px;">
+    <img class="set-logo" src="../../../IMAGES/sets/set_logo_temporal_forces.png" alt="Temporal Forces">
+    <div class="set-name">Temporal Forces</div>
+  </div>
+
+</body>
+</html>

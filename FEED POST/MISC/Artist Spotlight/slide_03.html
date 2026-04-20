@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 03 - Kanda Art Style DNA</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF; }
+
+  .section-label {
+    position: absolute; top: 170px; left: 60px; z-index: 5;
+    font-size: 24px; font-weight: 700; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 10px;
+  }
+  .section-label::after {
+    content: ''; display: block; width: 70px; height: 4px;
+    background: #FF4444; margin-top: 14px;
+  }
+
+  .headline {
+    position: absolute; top: 240px; left: 60px; right: 60px; z-index: 5;
+    font-size: 88px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.0; letter-spacing: -3px; text-transform: uppercase;
+  }
+  .headline .red { color: #FF4444; }
+
+  .dna-grid {
+    position: absolute; top: 520px; left: 60px; right: 60px; z-index: 4;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  .dna-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 32px 28px;
+  }
+  .dna-jp {
+    font-size: 30px; font-weight: 700; color: #FFFFFF;
+    letter-spacing: 1px; margin-bottom: 6px;
+  }
+  .dna-en {
+    font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.5);
+    letter-spacing: 4px; text-transform: uppercase; margin-bottom: 18px;
+  }
+  .dna-desc {
+    font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.8);
+    line-height: 1.4;
+  }
+
+  .body-note {
+    position: absolute; bottom: 170px; left: 60px; right: 60px; z-index: 5;
+    font-size: 22px; font-weight: 400; color: rgba(255,255,255,0.8);
+    line-height: 1.4;
+  }
+  .body-note .highlight { color: #FF4444; font-weight: 700; }
+
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: #FF4444; padding: 10px 18px; border-radius: 4px;
+  }
+  .series-tag {
+    position: absolute; top: 82px; left: 24px; z-index: 10;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 4px;
+    color: #FFFFFF; line-height: 1;
+  }
+  .handle {
+    position: absolute; bottom: 54px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .page-no {
+    position: absolute; bottom: 54px; left: 60px;
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.35);
+    letter-spacing: 4px; z-index: 10;
+  }
+</style>
+</head>
+<body>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="series-tag">MISC #3 · ARTIST SPOTLIGHT</div>
+
+  <div class="section-label">GAYA KANDA</div>
+  <div class="headline">SENI TRADISIONAL<br><span class="red">JEPANG</span> DI KARTU MODERN</div>
+
+  <div class="dna-grid">
+    <div class="dna-card">
+      <div class="dna-jp">浮世絵</div>
+      <div class="dna-en">Ukiyo-e</div>
+      <div class="dna-desc">Gaya cetakan kayu klasik Jepang — linework tegas, kontras tinggi, motif alam.</div>
+    </div>
+    <div class="dna-card">
+      <div class="dna-jp">家紋</div>
+      <div class="dna-en">Kamon</div>
+      <div class="dna-desc">Pola lambang keluarga — bentuk geometris yang sering tersembunyi di background.</div>
+    </div>
+    <div class="dna-card">
+      <div class="dna-jp">波</div>
+      <div class="dna-en">Motif Ombak · Api</div>
+      <div class="dna-desc">Elemen bergerak melingkar, ombak, angin, dan api yang mengalir di sekitar subjek.</div>
+    </div>
+    <div class="dna-card">
+      <div class="dna-jp">色</div>
+      <div class="dna-en">Saturasi Tinggi</div>
+      <div class="dna-desc">Warna bold dengan kualitas mitologis — bukan fantasi generik.</div>
+    </div>
+  </div>
+
+  <div class="body-note">Hasilnya: kartu yang <span class="highlight">bisa dikenali dalam sekejap</span> — identitas visual yang jarang dimiliki ilustrator modern.</div>
+
+  <div class="page-no">03/07</div>
+  <div class="handle">@gokatrades</div>
+</body>
+</html>

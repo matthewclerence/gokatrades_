@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 07 - CTA</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .blurred-bg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../../../IMAGES/graded/pikachu_illustrator.jpg');
+    background-size: cover; background-position: center;
+    filter: blur(50px) brightness(0.2) saturate(0.6); z-index: 0;
+  }
+  .bg-card-left {
+    position: absolute; z-index: 1;
+    left: -40px; top: 50%; transform: translateY(-50%) rotate(-8deg);
+    width: 500px; opacity: 0.18; border-radius: 18px;
+  }
+  .bg-card-right {
+    position: absolute; z-index: 1;
+    right: -40px; top: 50%; transform: translateY(-50%) rotate(8deg);
+    width: 500px; opacity: 0.18; border-radius: 18px;
+  }
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: rgba(255, 68, 68, 0.9); padding: 10px 18px; border-radius: 4px;
+  }
+  .handle-bottom {
+    position: absolute; bottom: 24px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .content {
+    position: relative; z-index: 5;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 44px; text-align: center; padding: 0 80px;
+  }
+  .brand-logo { font-size: 170px; font-weight: 700; letter-spacing: -4px; }
+  .brand-logo .white { color: #FFFFFF; }
+  .brand-logo .red { color: #FF4444; }
+  .tagline { font-size: 38px; font-weight: 400; color: rgba(255,255,255,0.6); line-height: 1.5; }
+  .cta-button {
+    display: inline-block; background: #FF4444; color: #FFFFFF;
+    font-size: 42px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 5px; padding: 28px 80px; border-radius: 12px; margin-top: 8px;
+  }
+  .sub-actions { font-size: 30px; font-weight: 400; color: rgba(255,255,255,0.5); }
+  .divider { width: 80px; height: 3px; background: rgba(255,255,255,0.15); }
+  .handle-big { font-size: 58px; font-weight: 700; color: #FFFFFF; }
+  .footer-links {
+    font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.3);
+    letter-spacing: 5px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="blurred-bg"></div>
+  <img class="bg-card-left" src="../../../IMAGES/graded/pikachu_illustrator.jpg" alt="">
+  <img class="bg-card-right" src="../../../IMAGES/graded/pikachu_illustrator.jpg" alt="">
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="content">
+    <div class="brand-logo"><span class="white">GOKA</span><span class="red">TRADES</span></div>
+    <div class="tagline">Sumber terpercaya untuk Pokémon TCG</div>
+    <div class="cta-button">FOLLOW UNTUK INFO LAINNYA</div>
+    <div class="sub-actions">Link di bio · Tulis komentar</div>
+    <div class="divider"></div>
+    <div class="handle-big">@gokatrades</div>
+    <div class="footer-links">Berita · Harga · Komunitas</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Cuan Mingguan #1 — 21 April 2026 — Slide 01</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px; height: 1350px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Use the previously rendered slide_01.png as base — preserves cards,
+     +85% badge, GOKATRADES watermark, CUAN MINGGUAN #1 tag, and headline. */
+  .base {
+    position: absolute; inset: 0;
+    background-image: url('slide_01_base.png');
+    background-size: 1080px 1350px;
+    background-position: top left;
+    z-index: 0;
+  }
+
+  /* Cover the OLD bottom-row (spread GESER ... 21 APRIL 2026).
+     Old footer lived at bottom: 60px with height ~30px → y range 1260–1290. */
+  .cover-old-footer {
+    position: absolute; z-index: 1;
+    left: 0; right: 0; bottom: 40px; height: 80px;
+    background: #111111;
+  }
+
+  /* GESER stays directly below the headline (left). Date moves to
+     bottom-right corner, where the @gokatrades handle used to live. */
+  .geser {
+    position: absolute; z-index: 2;
+    left: 50px; bottom: 105px;
+    font-size: 22px; font-weight: 700;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase; letter-spacing: 5px;
+    line-height: 1;
+  }
+  .date {
+    position: absolute; z-index: 2;
+    right: 50px; bottom: 60px;
+    font-size: 22px; font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 5px;
+    line-height: 1;
+  }
+</style>
+</head>
+<body>
+  <div class="base"></div>
+  <div class="cover-old-footer"></div>
+  <div class="geser">GESER &gt;&gt;&gt;&gt;</div>
+  <div class="date">21 APRIL 2026</div>
+</body>
+</html>

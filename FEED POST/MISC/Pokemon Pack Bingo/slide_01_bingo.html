@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 01 - GokaTrades' Pokemon Pack Bingo</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF;
+  }
+
+  /* Standard brand mark: red pill top-left, white uppercase text. */
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: #FF4444; padding: 10px 18px; border-radius: 4px;
+  }
+
+  /* Series tag directly below the GOKATRADES pill. */
+  .series-tag {
+    position: absolute; z-index: 10;
+    top: 86px; left: 36px;
+    font-size: 22px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 5px;
+    color: #FFFFFF; line-height: 1;
+  }
+
+  /* Title — mirrors the Matrix's lockup style: 2 lines, left-aligned,
+     one red phrase. Tightened top margin to reclaim dead space. */
+  .title {
+    position: absolute; top: 130px; left: 80px; right: 80px; z-index: 5;
+    font-size: 78px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.0; letter-spacing: -3px;
+  }
+  .title .red { color: #FF4444; }
+
+  .grid {
+    position: absolute;
+    top: 300px; bottom: 40px; left: 40px; right: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    border: 3px solid #FFFFFF;
+    background: #111111;
+  }
+  .cell {
+    background: #111111;
+    border-right: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 6px 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cell:nth-child(3n) { border-right: none; }
+  .cell:nth-last-child(-n+3) { border-bottom: none; }
+
+  .pack-img-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .pack-img {
+    height: 320px;
+    width: auto;
+    max-width: 98%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.7));
+    image-rendering: -webkit-optimize-contrast;
+  }
+  .pack-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #EEEEEE;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="series-tag">MISC #3</div>
+
+  <div class="title">GokaTrades'<br><span class="red">Pokemon Pack</span> Bingo</div>
+
+  <div class="grid">
+    <!-- Row 1: Famous older JP -->
+    <div class="cell"><div class="pack-img-wrap"><img class="pack-img" src="packs/jp-151.jpg" alt=""></div><div class="pack-name">Pokemon 151</div></div>
+    <div class="cell"><div class="pack-img-wrap"><img class="pack-img" src="packs/jp-shiny-treasure.jpg" alt=""></div><div class="pack-name">Shiny Treasure ex</div></div>
+    <div class="cell"><div class="pack-img-wrap"><img class="pack-img" src="packs/jp-super-electric-breaker.jpg" alt=""></div><div class="pack-name">Super Electric Breaker</div></div>
+
+    <!-- Row 2: Recent famous JP -->
+    <div class="cell"><div class="pack-img-wrap"><img class="pack-img" src="packs/jp-terastal-festival.png" alt=""></div><div class="pack-name">Terastal Festival</div></div>
+    <div class="cell"><div class="pack-img-wrap"><img class="pack-img" src="packs/jp-inferno-x.jpg" alt=""></div><div class="pack-name">Inferno X</div></div>
+    <div class="cell"><div class="pack-img-wrap"><img class="pack-img" src="packs/jp-ninja-spinner.jpg" alt=""></div><div class="pack-name">Ninja Spinner</div></div>
+
+    <!-- Row 3: Indonesian releases -->
+    <div class="cell"><div class="pack-img-wrap"><img class="pack-img" src="packs/id-kobaran-biru.png" alt=""></div><div class="pack-name">Kobaran Biru</div></div>
+    <div class="cell"><div class="pack-img-wrap"><img class="pack-img" src="packs/id-mega-impian-ex.png" alt=""></div><div class="pack-name">Evolusi Mega Impian ex</div></div>
+    <div class="cell"><div class="pack-img-wrap"><img class="pack-img" src="packs/id-ledakan-peniada.png" alt=""></div><div class="pack-name">Ledakan Peniada</div></div>
+  </div>
+
+</body>
+</html>

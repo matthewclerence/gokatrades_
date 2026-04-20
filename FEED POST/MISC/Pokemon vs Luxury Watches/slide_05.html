@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 05 - Perbandingan 4</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF;
+  }
+  .blurred-bg {
+    position: absolute; top: -80px; left: -80px;
+    width: calc(100% + 160px); height: calc(100% + 160px);
+    background-image: url('../../../IMAGES/raw singles/show_blastoise-cosmos-holo-009-165-white-back-starlight-holo-test-print-card-wizards-of-the-coast-era-promos.webp');
+    background-size: cover; background-position: center;
+    filter: blur(35px) brightness(0.25) saturate(0.6); z-index: 0;
+  }
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: rgba(255, 68, 68, 0.9); padding: 10px 18px; border-radius: 4px;
+  }
+  .handle {
+    position: absolute; bottom: 24px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .page-content {
+    position: relative; z-index: 2; width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 80px 50px 60px;
+  }
+  .section-label {
+    font-size: 24px; font-weight: 700; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 12px; margin-bottom: 14px; text-align: center;
+    flex-shrink: 0;
+  }
+  .section-underline { display: block; width: 70px; height: 4px; background: #FF4444; margin: 0 auto 52px; flex-shrink: 0; }
+  .comparison-row {
+    display: flex; align-items: stretch; gap: 0; width: 100%; flex-shrink: 0;
+  }
+  .col {
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; padding: 32px 28px;
+    border-radius: 20px;
+  }
+  .col-card {
+    background: rgba(255,68,68,0.08);
+    border: 1px solid rgba(255,68,68,0.3);
+    margin-right: 20px;
+  }
+  .col-watch {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    margin-left: 20px;
+  }
+  .col-img-area {
+    width: 100%; height: 560px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 24px;
+  }
+  .col-card-img {
+    max-height: 560px; max-width: 100%; width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
+  }
+  .col-watch-img {
+    width: 100%; max-height: 440px; height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+  }
+  .col-type {
+    font-size: 16px; font-weight: 700; letter-spacing: 5px;
+    text-transform: uppercase; margin-bottom: 12px; align-self: flex-start;
+  }
+  .col-card .col-type { color: #FF4444; }
+  .col-watch .col-type { color: #A0A0A0; }
+  .col-name {
+    font-size: 46px; font-weight: 700; line-height: 1.0;
+    text-transform: uppercase; margin-bottom: 12px; align-self: flex-start;
+  }
+  .col-sub {
+    font-size: 20px; font-weight: 600; color: #A0A0A0;
+    letter-spacing: 1px; margin-bottom: 28px; text-transform: uppercase; align-self: flex-start;
+  }
+  .col-price {
+    font-size: 68px; font-weight: 700; line-height: 1.0; margin-bottom: 10px; align-self: flex-start;
+  }
+  .col-card .col-price { color: #22C55E; }
+  .col-watch .col-price { color: #FFFFFF; }
+  .col-idr { font-size: 28px; font-weight: 600; color: #A0A0A0; align-self: flex-start; }
+  .col-extra {
+    margin-top: 16px; font-size: 17px; font-weight: 600;
+    color: #FF4444; text-transform: uppercase; letter-spacing: 2px;
+    background: rgba(255,68,68,0.1); border-radius: 8px; padding: 8px 12px;
+    display: inline-block; align-self: flex-start;
+  }
+  .vs-divider {
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; width: 80px;
+  }
+  .vs-badge {
+    font-size: 44px; font-weight: 700; color: #FF4444;
+    background: rgba(255,68,68,0.12); border: 2px solid #FF4444;
+    border-radius: 50%; width: 80px; height: 80px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .match-badge {
+    margin-top: 36px; flex-shrink: 0;
+    background: rgba(34,197,94,0.12); border: 2px solid #22C55E;
+    border-radius: 14px; padding: 20px 40px; text-align: center; width: 100%;
+  }
+  .match-label { font-size: 22px; font-weight: 700; color: #22C55E; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 8px; }
+  .match-text { font-size: 34px; font-weight: 700; color: #FFFFFF; }
+  .match-text .hl { color: #22C55E; }
+</style>
+</head>
+<body>
+  <div class="blurred-bg"></div>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="page-content">
+    <div class="comparison-row">
+      <div class="col col-card">
+        <div class="col-img-area">
+          <img class="col-card-img" src="../../../IMAGES/raw singles/show_blastoise-cosmos-holo-009-165-white-back-starlight-holo-test-print-card-wizards-of-the-coast-era-promos.webp" alt="Blastoise Galaxy Star Holo">
+        </div>
+        <div class="col-type">🃏 Kartu</div>
+        <div class="col-name">BLASTOISE<br>GALAXY<br>STAR HOLO</div>
+        <div class="col-sub">Test Print · WotC Era Promo</div>
+        <div class="col-price">$400,000</div>
+        <div class="col-idr">≈ Rp 6,6 miliar</div>
+        <div class="col-extra">Presentation Copy · Langka</div>
+      </div>
+      <div class="vs-divider">
+        <div class="vs-badge">VS</div>
+      </div>
+      <div class="col col-watch">
+        <div class="col-img-area">
+          <img class="col-watch-img" src="../../../IMAGES/misc/PATEK NAUTILUS.webp" alt="Patek Philippe Nautilus">
+        </div>
+        <div class="col-type">⌚ Jam</div>
+        <div class="col-name">PATEK<br>NAUTILUS<br>40TH ANN.</div>
+        <div class="col-sub">5711/1P · Limited 700 Pieces</div>
+        <div class="col-price">~$400,000</div>
+        <div class="col-idr">≈ Rp 6,6 miliar</div>
+      </div>
+    </div>
+    <div class="match-badge">
+      <div class="match-label">✓ Harga Setara</div>
+      <div class="match-text">Satu kartu = <span class="hl">satu Patek Nautilus langka</span></div>
+    </div>
+  </div>
+</body>
+</html>

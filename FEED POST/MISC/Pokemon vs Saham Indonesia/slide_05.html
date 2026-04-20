@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Slide 05 - Liquidity</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #111111; position: relative; color: #FFFFFF; }
+
+  .section-label {
+    position: absolute; top: 170px; left: 60px; z-index: 5;
+    font-size: 24px; font-weight: 700; color: #FF4444;
+    text-transform: uppercase; letter-spacing: 10px;
+  }
+  .section-label::after {
+    content: ''; display: block; width: 70px; height: 4px;
+    background: #FF4444; margin-top: 14px;
+  }
+
+  .headline {
+    position: absolute; top: 240px; left: 60px; right: 60px; z-index: 5;
+    font-size: 88px; font-weight: 700; color: #FFFFFF;
+    line-height: 1.0; letter-spacing: -3px; text-transform: uppercase;
+  }
+  .headline .red { color: #FF4444; }
+
+  .versus {
+    position: absolute; top: 520px; left: 60px; right: 60px; z-index: 4;
+    display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px;
+    align-items: stretch;
+  }
+  .vs-col {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 36px 30px;
+  }
+  .vs-tag {
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .vs-tag.saham { color: #22C55E; }
+  .vs-tag.kartu { color: #FF4444; }
+
+  .vs-time {
+    font-size: 72px; font-weight: 700; color: #FFFFFF;
+    letter-spacing: -3px; line-height: 1; margin-bottom: 6px;
+  }
+  .vs-time-unit {
+    font-size: 18px; font-weight: 600; color: rgba(255,255,255,0.55);
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px;
+  }
+
+  .vs-steps {
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .vs-step {
+    display: flex; gap: 14px; align-items: flex-start;
+    font-size: 16px; font-weight: 500; color: rgba(255,255,255,0.78);
+    line-height: 1.4;
+  }
+  .vs-step-num {
+    flex-shrink: 0;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: rgba(255,255,255,0.12); color: #FFFFFF;
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 1px;
+  }
+
+  .arrow-center {
+    font-size: 36px; font-weight: 700; color: rgba(255,255,255,0.3);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .body-note {
+    position: absolute; top: 1130px; left: 60px; right: 60px; z-index: 5;
+    background: rgba(255,68,68,0.08);
+    border-left: 4px solid #FF4444;
+    border-radius: 8px;
+    padding: 22px 28px;
+    font-size: 22px; font-weight: 500; color: #FFFFFF;
+    line-height: 1.4;
+  }
+  .body-note strong { color: #FF4444; }
+
+  .watermark { position: absolute; top: 24px; left: 24px; z-index: 10; }
+  .watermark-text {
+    font-size: 22px; font-weight: 700; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 2px;
+    background: #FF4444; padding: 10px 18px; border-radius: 4px;
+  }
+  .series-tag {
+    position: absolute; top: 82px; left: 24px; z-index: 10;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 4px;
+    color: #FFFFFF; line-height: 1;
+  }
+  .handle {
+    position: absolute; bottom: 54px; right: 44px;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.45); z-index: 10;
+  }
+  .page-no {
+    position: absolute; bottom: 54px; left: 60px;
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.35);
+    letter-spacing: 4px; z-index: 10;
+  }
+</style>
+</head>
+<body>
+  <div class="watermark"><span class="watermark-text">GOKATRADES</span></div>
+  <div class="series-tag">MISC #5 · POKEMON VS SAHAM INDO</div>
+
+  <div class="section-label">LIKUIDITAS</div>
+  <div class="headline">SEBERAPA CEPAT<br>BISA <span class="red">DIJUAL</span>?</div>
+
+  <div class="versus">
+    <div class="vs-col">
+      <div class="vs-tag saham">Saham BBCA</div>
+      <div class="vs-time">~1</div>
+      <div class="vs-time-unit">Menit</div>
+      <div class="vs-steps">
+        <div class="vs-step"><span class="vs-step-num">1</span>Buka app Stockbit / Ajaib</div>
+        <div class="vs-step"><span class="vs-step-num">2</span>Klik "Sell" di harga pasar</div>
+        <div class="vs-step"><span class="vs-step-num">3</span>T+2 settlement, uang masuk RDN</div>
+      </div>
+    </div>
+    <div class="arrow-center">VS</div>
+    <div class="vs-col">
+      <div class="vs-tag kartu">Kartu Pokémon</div>
+      <div class="vs-time">~1-4</div>
+      <div class="vs-time-unit">Minggu</div>
+      <div class="vs-steps">
+        <div class="vs-step"><span class="vs-step-num">1</span>Foto + list di Shopee/eBay</div>
+        <div class="vs-step"><span class="vs-step-num">2</span>Tunggu buyer yang cocok</div>
+        <div class="vs-step"><span class="vs-step-num">3</span>Packing, kirim, konfirm terima</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body-note">Kartu langka bisa butuh <strong>buyer khusus</strong> — dan harga "pasaran" ≠ harga jual cepat.</div>
+
+  <div class="page-no">05/07</div>
+  <div class="handle">@gokatrades</div>
+</body>
+</html>
